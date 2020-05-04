@@ -11,9 +11,6 @@ mkdir -p \
 # create symlinks
 symlinks=( \
 /var/www/html/api/config/config.php
-/var/www/html/plugins/images/tabs/megadoomer.png
-/var/www/html/plugins/theme_files/plex_theme
-/var/www/html/css/themes/Plex.css
 )
 
 for i in "${symlinks[@]}"
