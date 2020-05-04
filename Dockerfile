@@ -3,6 +3,7 @@ FROM lsiobase/nginx:3.9
 RUN \
 	apk add --no-cache --upgrade \
 	curl \
+	jq \
 	php7-curl \
 	php7-ldap \
 	php7-pdo_sqlite \

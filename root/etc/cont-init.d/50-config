@@ -11,7 +11,16 @@ mkdir -p \
 # create symlinks
 symlinks=( \
 /var/www/html/api/config/config.php
+/var/www/html/api/config/config.json
 )
+
+if [[ -n "${CONFIG_SOURCE_DIR:-}" ]] ; then
+	json_configs=( $( find ${CONFIG_SOURCE_DIR} -name '*.json' | sort -n ) )
+	if [[ -n "${json_configs[*]}" ]] ; then
+		echo "json config found, $new_location/config.php will be ignored"
+		jq -s add "${json_configs[@]}" > $new_location/config.json
+	fi
+fi
 
 for i in "${symlinks[@]}"
 do
