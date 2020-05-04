@@ -96,6 +96,13 @@ function configLazy()
 function loadConfig($path = null)
 {
 	$path = ($path) ? $path : $GLOBALS['userConfigPath'];
+	$pathinfo = pathinfo($path);
+	$jsonPath = $pathinfo["dirname"] . "/" . $pathinfo["filename"] . ".json";
+
+	if (is_file($jsonPath)) {
+		return json_decode(file_get_contents($jsonPath), true);
+	}
+
 	if (!is_file($path)) {
 		return null;
 	} else {
