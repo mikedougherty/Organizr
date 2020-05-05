@@ -294,7 +294,7 @@
 <script src="js/simplebar.js"></script>
 <script src="https://apis.google.com/js/client.js?onload=googleApiClientReady"></script>
 <script src="js/functions.js?v=<?php echo $GLOBALS['fileHash']; ?>"></script>
-<script src="js/custom.min.js?v=<?php echo $GLOBALS['fileHash']; ?>"></script>
+<script src="js/custom.js?v=<?php echo $GLOBALS['fileHash']; ?>"></script>
 <script id="custom-theme-javascript"></script>
 <script id="custom-javascript"></script>
 <script src="https://js.pusher.com/4.1/pusher.min.js"
